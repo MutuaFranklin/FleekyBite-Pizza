@@ -442,13 +442,26 @@ html {
 
   }
 
+  /* Modal */
 
   .modal-content{
     width: 1150px;
     height: 730px;
-    background-color: rgb(199, 199, 211) !important;
+    background-image: url("https://img.freepik.com/free-photo/concept-promotional-flyer-poster-restaurants-pizzerias-template-with-delicious-pizza-olive-tomato-mozzarella-cheese_70216-8208.jpg?size=626&ext=jpg");
+    /* background-color: rgb(196, 191, 191); */
+    border: 1px solid white;
+    
   }
 
+  .modal-header h5{
+    color: white;
+    
+  }
+
+  .modal-header button{
+    color: white !important;
+    
+  }
   .modal-body{
     height: 500px;
   }
@@ -466,14 +479,16 @@ html {
 
 .cart-shipping .col-md-5{
     height: 60vh;
-    border: 1px solid black;
+    border: 1px solid white;
+    background-color: rgb(53, 16, 11);
+
 }
 
 .cart-shipping #cart-details h2{
     font-size: 16px;
     text-align: center;
     margin-top: 10px;
-    color: black;
+    color: white;
 
 }
 
@@ -492,7 +507,12 @@ html {
   width: 450px;
   font-size: 13px;
   font-weight: bold;
-  background-color: rgb(114, 80, 16);
+  margin-bottom: 10px;
+  background-color: rgb(204, 137, 4);
+}
+
+.cart-detail-box p{
+  color: #000;
 }
 
 
@@ -500,13 +520,118 @@ html {
   width: 50px;
   height: 30px;
   background: transparent;
-  color: #fff;
+  color:black;
   font-weight: bold;
   margin-top: 5px;
 }
 
 #product-description, #product-price{
   margin-top: 10px;
+  color: #000;
+}
+
+#cart-details .subtotal{
+  font-size: 14px;
+
+}
+
+#cart-details .total-cost{
+  font-size: 17px;
+  margin-top: 30px;
+  display: none;
+  font-weight: 500;
+  font-family: 'Pacifico', cursive;
+
+
+}
+
+
+#cart-details label{
+  color: white;
+  margin: 3px;
+  font-size: 14px;
+
+}
+#cart-details #details-form label{
+  font-size: 13px;
+  margin: 3px;
+
+}
+
+
+#cart-details #details-form input{
+  background-color: rgb(204, 137, 4);
+  font-size: 13px;
+  color: #000;
+
+
+}
+
+#cart-details input::placeholder{
+  color: #000;
+}
+
+#cart-details select{
+  background-color: rgb(204, 137, 4);
+  margin: 3px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#cart-details .no-delivery-btn{
+  height: 35px;
+  font-size: 13px;
+  font-weight: bold;
+  display: none;
+}
+
+
+#shipping-details .shipping-form{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+
+}
+
+#shipping-details .shipping-form label{
+  font-size: 13px;
+  margin: 3px;
+
+}
+
+
+#shipping-details .shipping-form input{
+  background-color: rgb(204, 137, 4);
+  font-size: 13px;
+  color: #000;
+
+
+}
+
+#shipping-details .shipping-form input::placeholder{
+  color: #000;
+}
+
+#shipping-details .final-output{
+  font-size: 15px;
+  font-family: 'Pacifico', cursive;
+  margin-top: 30px;
+  box-shadow: 0px 8px 30px 0px rgba(153, 153, 153, 0.1);
+
+}
+
+#shipping-details .shipping-btn{
+  height: 35px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 30px;
+
+  
+  
+
+
 }
 
 
@@ -517,65 +642,4 @@ html {
 	============================================================================================ */
 
 
-  .cart-details{
-    background-image: url("https://i.pinimg.com/736x/90/a0/18/90a0186bdab0b5fb2a59de35ab8f2ad4.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 90.9vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.cart-details .head h2{ 
-    margin: 10px;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: white;
-}
-
-.col-md-9 p{
-   color: white;
-}
-
-.feed-pizza-data{
-    display:flex;
-    flex-direction: column;
-    height: 80vh;
-    background-color: rgb(196, 191, 191);
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center;
-  
-  }
-
-.feed-pizza-data .col-md-5{
-    height: 70vh;
-    border: 2px solid black;
-}
-
-.feed-pizza-data #pizza-form h2{
-    font-size: 16px;
-    text-align: center;
-    margin-top: 10px;
-    color: white;
-
-}
-
-.feed-pizza-data #pizza-feedback h2{
-    font-size: 16px;
-    text-align: center;
-    margin-top: 10px;
-
-}
-
-.feed-pizza-data #pizza-form{
-    background-image: url("https://image.freepik.com/foto-gratis/rebanada-pizza-sobre-fondo-negro-espacio-texto-vista-superior_117255-563.jpg");
-    background-size: cover;
-    background-position: center;
-    /* background-position: left; */
-
-}
-
-
+ 
