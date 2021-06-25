@@ -30,3 +30,18 @@ $(document).ready(function(){
 
 });
 
+
+//Pizza type constructor
+function PizzaType(crust, topping, size){
+  this.crustName = crust;
+  this.toppingName = topping;
+  this.sizeName = size;
+  this.price = [];
+}
+
+//pizza type prototype
+PizzaType.prototype.fullPizzaDescription = function(){
+  return this.crustName + " " + this.sizeName + " sized " + this.toppingName + " pizza";
+}
+
+
