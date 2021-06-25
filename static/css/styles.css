@@ -216,19 +216,27 @@ html {
   }
 
   #menu-slides .carousel-caption #pizza2{
-    background-image: url("http://cdn.shopify.com/s/files/1/1718/7795/articles/Spicy-beef.jpg?v=1597064256");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnf3_wKJ34GwZ3vo14lqQfF9pOAvLakaSIjbmdCUZviYAIC_Prig2GFX8pl4wJxUdBvI4&usqp=CAU");
+    background-size: cover;
+
   }
 
   #menu-slides .carousel-caption #pizza3{
-    background-image: url("https://pinchofyum.com/wp-content/uploads/bbq-chicken-pizza.jpg");
+    background-image: url("https://thecafesucrefarine.com/wp-content/uploads/White-Four-Cheese-Pita-Pizza-with-Sweet-Basil-and-Garlic-Oil-and-lots-of-variations-1.jpg");
+    background-size: cover;
+
   }
 
   #menu-slides .carousel-caption #pizza4{
-    background-image: url("https://pinchofyum.com/wp-content/uploads/bbq-chicken-pizza.jpg");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGjQri4g88MEfRxCpJiH5TQCtZU-658k3SZQ&usqp=CAU");
+    background-size: cover;
+
   }
 
   #menu-slides .carousel-caption #pizza5{
-    background-image: url("https://pinchofyum.com/wp-content/uploads/bbq-chicken-pizza.jpg");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cwacrhc3fVHJmgwWjJU1De7XaJ4Fgd63Fg&usqp=CAU");
+    background-size: cover;
+
   }
 
   #menu-slides .carousel-caption #pizza6{
@@ -236,13 +244,28 @@ html {
   }
 
   #menu-slides .carousel-caption #pizza7{
-    background-image: url("https://pinchofyum.com/wp-content/uploads/bbq-chicken-pizza.jpg");
+    background-image: url("https://www.kitchenkonfidence.com/wp-content/uploads/2012/10/Kimchi-and-Bacon-Pizza2-e1421678860180-480x270.jpg");
+    background-size: cover;
   }
   #menu-slides .carousel-caption #pizza8{
-    background-image: url("https://pinchofyum.com/wp-content/uploads/bbq-chicken-pizza.jpg");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3oPJDZ9C95A_ROzA2X4CwZ-yeLHMUm-sgT5dSRG2Ujy4xzRU8zGcS8gs3g2JiXzsltHg&usqp=CAU");
+    background-size: cover;
   }
   #menu-slides .carousel-caption #pizza9{
-    background-image: url("https://pinchofyum.com/wp-content/uploads/bbq-chicken-pizza.jpg");
+    background-size: cover;
+  }
+
+  #menu-slides .carousel-caption #small{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNPaXZDt5dM_gfuV0VBtqx7__LgrSw0LGxWQ&usqp=CAU");
+    background-size: cover;
+  }
+  #menu-slides .carousel-caption #medium {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnf3_wKJ34GwZ3vo14lqQfF9pOAvLakaSIjbmdCUZviYAIC_Prig2GFX8pl4wJxUdBvI4&usqp=CAU");
+    background-size: cover;
+  }
+  #menu-slides .carousel-caption #large{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlBk6meBNQY-G72dRqhB9B-Pl42fA28TaRQSaTc3u3oZvdHHl-zcDEnx9K09tQ7qYsPGM&usqp=CAU");
+    background-size: cover;
   }
 
 
@@ -364,10 +387,15 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 15px;
+}
+
+.form-select{
+  font-size: 13px;
 }
 
 #pizza-data-form .col-5{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 
