@@ -200,3 +200,66 @@ $('select').on('change', function() {
   
 });
 
+// order form event
+$(document).ready(function(){
+  $("form#details-form").submit(function(event){
+    var name = $("input#user-name").val();
+    var phone = $("input#user-number").val();
+
+    if (!$("input#user-name").val()){
+      alert("Please enter your name!")
+    }
+    else if (!$("input#user-number").val()){
+      alert("Please enter your phone number!");
+    }
+
+    else{
+      alert (name + ", thankyou for shopping with FleekyBite pizza.Your pizza is waiting for you. Enjoy and welcome again.");
+    }
+    
+    $('form#details-form').get(0).reset();
+    $("#cart-details .no-delivery-btn").hide();
+    $("#cart-details .total-cost").hide();
+    $('#exampleModal').modal('hide');
+
+    return false;
+    
+  });
+
+});
+
+// shipping form event
+$(document).ready(function(){
+  $("form#shipping-details-form").submit(function(event){
+    var name = $("#details-form input#user-name").val();
+    var phone = $("#details-form input#user-number").val();
+    var address = $("input#user-address").val();
+
+    if (!$("#details-form input#user-name").val()){
+      alert("Please enter your name!")
+    }
+    else if (!$("#details-form input#user-number").val()){
+      alert("Please enter your phone number!");
+    }
+
+    else if (!$("input#user-address").val()){
+      alert("Please enter your delivery address!");
+    }
+    else{
+      alert (name + ", thankyou for shopping with FleekyBite pizza.Your pizza will be delivered to " + address + ". Enjoy and welcome again.");
+    }
+    
+    $('form#shipping-details-form').get(0).reset();
+    $('form#details-form').get(0).reset();
+    $("#shipping-details img").fadeIn(2000);
+    $(".shipping-form").hide();
+    $('#exampleModal').modal('hide');
+
+
+    return false;
+    
+  });
+
+});
+
+
