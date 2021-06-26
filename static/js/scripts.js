@@ -176,3 +176,27 @@ $(".pizza-card .add-to-cart").click(function(event) {
 //   large: 300,
 // }; 
 
+
+// Modal event
+$('select').on('change', function() {
+  if ($(this).val() === 'yes') {
+    $("#shipping-details img").hide();
+    $(".shipping-form").fadeIn(2000);
+    $("#cart-details .total-cost").hide();
+    $("#cart-details .no-delivery-btn").hide();
+    $(".shipping-form").css("align-items", "centre");
+
+
+
+  }
+  else{
+    $("#shipping-details img").fadeIn(2000);
+    $(".shipping-form").hide();
+    $("#cart-details .total-cost").fadeIn(2000);
+    $("#cart-details .no-delivery-btn").fadeIn(2000);
+
+
+  }
+  
+});
+
