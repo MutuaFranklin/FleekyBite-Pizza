@@ -41,22 +41,8 @@ function PizzaType(crust, size, topping){
 
 //pizza type prototype
 PizzaType.prototype.fullPizzaDescription = function(){
-  return this.crustName + " " + this.sizeName + " size pizza with "  + this.toppingName + " toppings";
+  return this.crustName + " " + this.sizeName + " sized pizza with "  + this.toppingName + " toppings";
 }
-
-
-//Pizza price constructor
-// function PizzaPrice(crustPrice, toppingPrice, sizePrice){
-//   this.crustP = crustPrice;
-//   this.toppingP = toppingPrice;
-//   this.sizeP = sizePrice;
-// }
-
-// //pizza price prototype
-// PizzaPrice.prototype.totalPrice = function(){
-//   return 500 + this.crustP +  this.toppingP + this.sizeP;
-// }
-
 
 
 // On form submit actions
@@ -66,29 +52,62 @@ $("form#pizza-data-form").submit(function(event) {
     $.each($(".form-check-input:checked"), function(){
         toppingList.push($(this).val());
   });
-  var selectedPizzaTopping = toppingList;
+  var selectedPizzaTopping = toppingList.join(", ");
   var selectedPizzaCrust= $("select#selected-crust").val();
   var selectedPizzaSize= $("select#selected-size").val();
   var newPizzaSelection= new PizzaType(selectedPizzaCrust, selectedPizzaSize, selectedPizzaTopping);
+ 
 
+  // Topping prices
 
-    // Topping price
-  if (selectedPizzaTopping === "italian sausage"){
-    toppingPrice = 200;
+  var toppingPrices = selectedPizzaTopping;
+
+  if ( toppingPrices.includes("Italian Sausage")){
+    italianPrice = 200;
   }
-  else if (selectedPizzaTopping === "bacon"){
-    toppingPrice = 150;
+  else{
+    italianPrice = 0;
+
   }
-  else if (selectedPizzaTopping === "cheese & garlic"){
-    toppingPrice = 100;
-  }else if (selectedPizzaTopping === "potato & rosemary"){
-    toppingPrice = 100;
-  }else if (selectedPizzaTopping === "pepperoni"){
-    toppingPrice = 100;
+  if ( toppingPrices.includes("Bacon")){
+    baconPrice = 150;
   }
-  else if (selectedPizzaTopping === "onion & green pepper"){
-    toppingPrice = 50;
+  else{
+    baconPrice = 0;
+
   }
+  if ( toppingPrices.includes("Cheese & garlic")){
+    cheesePrice = 100;
+  }
+  else{
+    cheesePrice = 0;
+
+  }
+  if ( toppingPrices.includes("Potato & rosemary")){
+    potatoPrice = 100;
+  }
+  else{
+    potatoPrice = 0;
+
+  }
+  if ( toppingPrices.includes("Pepperoni")){
+    pepperoniPrice = 100;
+  }
+  else{
+    pepperoniPrice = 0;
+
+  }
+  if ( toppingPrices.includes("Onion & green pepper")){
+    onionPrice = 50;
+  }
+  else{
+    onionPrice = 0;
+
+  }
+
+  totalP = (italianPrice + baconPrice + cheesePrice + potatoPrice + pepperoniPrice +onionPrice );
+  alert(totalP)
+  
 
   // Crust price
 
@@ -115,19 +134,14 @@ $("form#pizza-data-form").submit(function(event) {
     sizePrice = 300;
   }
 
-  // var totalPrice = parseInt( 500 + crustPrice +  toppingPrice + sizePrice );
-
-
-
+  var totalPrice = parseInt( 500 + crustPrice + totalP +  sizePrice );
 
 
   $(".dummyDescription").hide();
   $(".dummyPrice").hide();
   $(".pDescription").append(newPizzaSelection.fullPizzaDescription() ).hide().fadeIn(2000);
-  // $(".price").append("Ksh. " + totalPrice). hide().fadeIn(2000);
+  $(".price").append("Ksh. " + totalPrice). hide().fadeIn(2000);
   $("#cart-btn").fadeIn(1000);
-
-
 
   document.getElementById("pizza-data-form").reset();
  
@@ -146,35 +160,6 @@ $(".pizza-card .add-to-cart").click(function(event) {
   
  
 });
-
-
-      // newPizzaType.addresses.push(newAddress)
-
-
-// Calculate pizza prices
-
-// var crust = {
-//   crispy: 250,
-//   stuffed: 150,
-//   glutenFree: 100,
-//   flatBread: 50
-// }; 
-
-// var toppings = {
-//   chicken: 250,
-//   beef: 150,
-//   cheeseAndGarlic: 100,
-//   potatoAndRosemary: 100,
-//   pepperoni:100,
-//   onionAndGreenPepper:50
-
-// }; 
-
-// var size = {
-//   small: 0,
-//   medium: 100,
-//   large: 300,
-// }; 
 
 
 // Modal event
