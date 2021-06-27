@@ -139,9 +139,8 @@ $("form#pizza-data-form").submit(function(event) {
   var txtP;
 
   if (confirm(newPizzaSelection.fullPizzaDescription() ) + totalPrice) {
-    txt = 
+    
 
-    console.log(txt);
   }
 
   $(".dummyDescription").hide();
@@ -163,7 +162,17 @@ $(".pizza-card .add-to-cart").click(function(event) {
   $("#cart-btn").hide();
   $(".dummyDescription").fadeIn(500);
   $(".dummyPrice").fadeIn(1000);
-  
+
+  person = prompt("Please enter your name:");
+  phoneN = prompt("Please enter your phone number:");
+  if (confirm("Want it delivered?")) {
+    output = prompt("Please enter your delivery address:");
+
+  }
+  else{
+    output = alert("Hello " + person + "! How are you today?");
+  }
+
   
 
 
@@ -175,6 +184,7 @@ $(".pizza-card .add-to-cart").click(function(event) {
 // Modal event
 $('select').on('change', function() {
   if ($(this).val() === 'yes') {
+    $(".pDescription").show();
     $("#shipping-details img").hide();
     $(".shipping-form").fadeIn(2000);
     $("#cart-details .total-cost").hide();
