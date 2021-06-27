@@ -166,6 +166,18 @@ html {
     color:black !important;
   }
 
+  .pizza-types  nav .navbar-nav li a:visited{
+    color: black !important;
+  }
+
+  .pizza-types  nav .navbar-nav li a:active{
+    color:#fd7e14;
+  }
+
+  .pizza-types  nav .navbar-nav li a .active{
+    color:#fd7e14;
+  }
+
   .pizza-types  nav .navbar-nav li a:hover{
     color:#fd7e14 !important;
   }
