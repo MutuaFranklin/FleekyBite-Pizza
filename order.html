@@ -131,11 +131,12 @@
                         <div class="pDescription">
                           
                         </div>
+                        
                         <h1 class="dummyDescription">Pizza description</h1> <br>
                         <p class="price"></p>
                         <p class="dummyPrice">Pizza price in Ksh</p>
-                        <p><button class="add-to-cart" type="submit"><p id="cart-btn">Make an Order</p></button></p>
-                      </div>
+                        <p><button class="add-to-cart" data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit"><p id="cart-btn">Make an Order</p></button></p>
+                    </div>
 
                 </div>
             </div>
@@ -153,41 +154,10 @@
                       <div class="row  cart-shipping" >
                           <div class="col-md-5" id="cart-details">
                               <h2>Cart details</h2>
-
-                              <!-- <div class="show-cart"></div> -->
                               <h1 class="pDescription"></h1>
 
-                          
-                              
-                              <div class="cart-detail-box">
-                                <div id="product-description">
-                                  <p>Gluten-free cheese & garlic medium sized pizza</p>
-                                </div>
-                                <div id="number-selected">
-                                  <input type="number" value= 1>
-                                </div>
-                                <div id="product-price">
-                                  <p>Ksh. 1000</p>
-                                </div>
-
-                                <div id="remove-product"></div>
-                              </div>
-                              <div class="cart-detail-box">
-                                <div id="product-description">
-                                  <p>Gluten-free cheese & garlic medium sized pizza</p>
-                                </div>
-                                <div id="number-selected">
-                                  <input type="number" value= 1>
-                                </div>
-                                <div id="product-price">
-                                  <p>Ksh. 1000</p>
-                                </div>
-
-                                <div id="remove-product"></div>
-                              </div>
-
                               <div class="subtotal">
-                                <p>Subtotal: Ksh. 3000</p>
+                                <!-- <p>Subtotal: Ksh. 3000</p> -->
                               </div>
 
                               <form  id="details-form">
@@ -209,8 +179,7 @@
                                     
                                 </select> 
 
-                                <div class="total-cost">
-                                  <p>The total cost is Ksh. 3000. Kindly submit your order</p>
+                                <div class="total-cost" id="netcost">
                                 </div>
 
                                 <button type="submit" class="btn btn-warning no-delivery-btn">Submit your Order</button>

@@ -40,11 +40,11 @@ $(document).ready(function(){
 
 
 //Pizza type constructor
-function PizzaType(crust, size, topping){
+function PizzaType(crust, size, topping, price){
   this.crustName = crust;
   this.toppingName = topping;
   this.sizeName = size;
-  this.price = [];
+  this.price = price;
 }
 
 //pizza type prototype
@@ -53,10 +53,27 @@ PizzaType.prototype.fullPizzaDescription = function(){
 }
 
 
+var pizzaValues = [].map(parseInt);
+var net = 0;
+
+// net += pizzaValues;
+// var net = pizzaValues.reduce((a, b) => a + b, 0)
+// for (var i = 0; i < pizzaValues.length; i++) {
+//   net += pizzaValues[i];
+
+
+ 
+
+
+
 // On form submit actions
 $("form#pizza-data-form").submit(function(event) {
   event.preventDefault();
   var toppingList = [];
+  var price = []
+  
+  price.push(totalPrice);
+
     $.each($(".form-check-input:checked"), function(){
         toppingList.push($(this).val());
   });
@@ -143,52 +160,78 @@ $("form#pizza-data-form").submit(function(event) {
 
   var totalPrice = parseInt( 500 + crustPrice + totalP +  sizePrice );
 
+
   
   if (confirm(newPizzaSelection.fullPizzaDescription() ) + totalPrice) {
     
   }
+
+  pizzaValues.push(totalPrice);
+  for (var i = 0; i < pizzaValues.length; i++) {
+     net += pizzaValues[i];
+     t= net - pizzaValues[1]
+  }
+
+
+
+
+  console.log(pizzaValues)
+  console.log(net);
+
+
+
+
+
 
   $(".dummyDescription").hide();
   $(".dummyPrice").hide();
   $(".pDescription").append("<li>" + newPizzaSelection.fullPizzaDescription() ).hide().fadeIn(2000) +  "</li>";
   $(".pDescription").append("Ksh. " + totalPrice).show();
   $("#cart-btn").fadeIn(1000);
-
+ 
   document.getElementById("pizza-data-form").reset();
+  return pizzaValues = [];
+
  
 });
 
+ 
+ 
 
 // On add to cart actions
 $(".pizza-card .add-to-cart").click(function(event) {
   event.preventDefault();
+  
+  $(".subtotal").append(" Subtotal: Ksh. " + net).fadeIn(2000);
+  $("#selected-orders").append('</td><td id="pizzatopping">' + newPizzaSelection.selectedPizzaTopping + '</td><td id="pizzacrust">'+ newPizzaSelection.selectedPizzaCrust + '</td><td id="pizzasize">'+ newPizzaSelection.selectedPizzaSize+'</td><td id="pizzaprice">'+ totalPrice+ '</td></tr>');
   $(".pDescription").hide().empty();
   $(".price").hide().empty();
   $("#cart-btn").hide();
   $(".dummyDescription").fadeIn(500);
   $(".dummyPrice").fadeIn(1000);
 
-  var totalPrice = parseInt( 500 + crustPrice + totalP +  sizePrice );
 
-  var totalOnDelivery = parseInt(totalPrice + 100);
+  // var totalPrice = parseInt( 500 + crustPrice + totalP +  sizePrice );
 
-  person = prompt("Please enter your name:");
-  phoneN = prompt("Please enter your phone number:");
+  // var totalOnDelivery = parseInt(totalPrice + 100);
 
-  if (confirm("Want it delivered?")) {
-    if(confirm("Delivery cost is Ksh. 100. Confirm to proceed")){
-    alert ("Your total cost on delivery is: " + totalOnDelivery);
+  // person = prompt("Please enter your name:");
+  // phoneN = prompt("Please enter your phone number:");
 
-    output = prompt("Please enter your delivery address:");
-    alert ("Thank you " + person + " for shopping with FleekyBite pizza.Your pizza will be delivered to " + output + ". Enjoy and welcome again.");
+  // if (confirm("Want it delivered?")) {
+  //   if(confirm("Delivery cost is Ksh. 100. Confirm to proceed")){
+  //   alert ("Your total cost on delivery is: " + totalOnDelivery);
+
+  //   output = prompt("Please enter your delivery address:");
+  //   alert ("Thank you " + person + " for shopping with FleekyBite pizza.Your pizza will be delivered to " + output + ". Enjoy and welcome again.");
     
-  }
+  // }
 
 
-  }
-  else{
-    alert ("Thank you " + person + " for shopping with FleekyBite pizza.Your pizza is waiting for you. Enjoy and welcome again.");
-  }
+  // }
+  // else{
+  //   alert ("Thank you " + person + " for shopping with FleekyBite pizza.Your pizza is waiting for you. Enjoy and welcome again.");
+  // }
 
   
 
@@ -202,6 +245,7 @@ $(".pizza-card .add-to-cart").click(function(event) {
 $('select').on('change', function() {
   if ($(this).val() === 'yes') {
     $(".pDescription").show();
+    
     $("#shipping-details img").hide();
     $(".shipping-form").fadeIn(2000);
     $("#cart-details .total-cost").hide();
@@ -214,7 +258,7 @@ $('select').on('change', function() {
   else{
     $("#shipping-details img").fadeIn(2000);
     $(".shipping-form").hide();
-    $("#cart-details .total-cost").fadeIn(2000);
+    // $("#cart-details .total-cost").append("The total cost is Ksh. " + net + "Kindly submit your order");
     $("#cart-details .no-delivery-btn").fadeIn(2000);
 
 
