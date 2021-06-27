@@ -98,56 +98,7 @@ html {
     }
 
 
-    .carousel-item{
-        height: 50rem;
-        position: relative;
-    }
-
-    #home-slide .carousel-caption{
-        position: absolute;
-        display: grid;
-        top: 100px;
-        bottom: auto;
-        grid-template-columns: auto auto auto auto;
-        grid-gap: 25px;
-        align-items: center;
-        margin-top: 20px;
-        margin-left:10%;
-        margin-right: 15%; 
-        margin-bottom: 40px;
-        z-index: 10;
-
-      
-      }
-      
-    #home-slide .carousel-caption .card{
-        height: 50vh;
-        width: 50vw;
-        background-size: cover;
-        border-radius: 0% !important;
-        /* border: 2px solid white; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: transparent;
-        filter: brightness(30);
-      
-      }
-
-      #home-slide .carousel-caption .card h2{
-        font-family: 'Pacifico', cursive;
-        font-size: 40px;
-        font-weight: 600;
-        color: yellow;
-        margin-bottom: 50px;
-      }
-
-      #home-slide .carousel-caption .card p{
-        font-family: 'Pacifico', cursive;
-        font-size: 20px;
-        font-weight: 600;
-      }
-   
+    
       #respofooter{
         display: flex;
         justify-content: center;
