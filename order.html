@@ -25,7 +25,6 @@
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="order.html" class="nav-link">Check n Order</a></li>
                 <li class="shop-icon"><a href="#"><img src="./static/img/services_icons/shopping-cart.jpeg" alt=""></i><span class="total-count" data-bs-toggle="modal" data-bs-target="#exampleModal">0</span></a></li>            
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -124,11 +123,13 @@
                     <h2>Check prices</h2>
                     <div class="pizza-card">
                         <img src="https://pinchofyum.com/wp-content/uploads/bbq-chicken-pizza.jpg" alt="Denim Jeans" style="width:100%">
-                        <h1 class="pDescription"></h1>
-                        <h1 class="dummyDescription">Pizza description</h1>
+                        <div class="pDescription">
+                          
+                        </div>
+                        <h1 class="dummyDescription">Pizza description</h1> <br>
                         <p class="price"></p>
                         <p class="dummyPrice">Pizza price in Ksh</p>
-                        <p><button class="add-to-cart" data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit"><p id="cart-btn">Add to cart</p></button></p>
+                        <p><button class="add-to-cart"  data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit"><p id="cart-btn">Add to cart</p></button></p>
                       </div>
 
                 </div>
@@ -147,19 +148,12 @@
                       <div class="row  cart-shipping" >
                           <div class="col-md-5" id="cart-details">
                               <h2>Cart details</h2>
-                              <div class="cart-detail-box">
-                                <div id="product-description">
-                                  <p></p>
-                                </div>
-                                <div id="number-selected">
-                                  <input type="number" value= 1>
-                                </div>
-                                <div id="product-price">
-                                  <p>Ksh. 1000</p>
-                                </div>
 
-                                <div id="remove-product"></div>
-                              </div>
+                              <!-- <div class="show-cart"></div> -->
+                              <h1 class="pizzaDescription"></h1>
+
+                          
+                              
                               <div class="cart-detail-box">
                                 <div id="product-description">
                                   <p>Gluten-free cheese & garlic medium sized pizza</p>

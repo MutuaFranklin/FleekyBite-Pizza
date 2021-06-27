@@ -442,6 +442,7 @@ html {
 
   .pizza-card .pDescription {
     display: none;
+    flex-direction: row;
     font-size: 12px;
     margin-top: 30px;
     font-weight: 600;
@@ -582,6 +583,7 @@ html {
 
 #cart-details .subtotal{
   font-size: 14px;
+  color: #fff;
 
 }
 
@@ -608,11 +610,16 @@ html {
 
 }
 
+#cart-details #details-form p{
+ color: #fff;
+
+}
+
 
 #cart-details #details-form input{
   background-color: rgb(204, 137, 4);
   font-size: 13px;
-  color: #000;
+  color: white !important;
 
 
 }

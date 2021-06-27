@@ -106,7 +106,6 @@ $("form#pizza-data-form").submit(function(event) {
   }
 
   totalP = (italianPrice + baconPrice + cheesePrice + potatoPrice + pepperoniPrice +onionPrice );
-  alert(totalP)
   
 
   // Crust price
@@ -136,11 +135,19 @@ $("form#pizza-data-form").submit(function(event) {
 
   var totalPrice = parseInt( 500 + crustPrice + totalP +  sizePrice );
 
+  var txt;
+  var txtP;
+
+  if (confirm(newPizzaSelection.fullPizzaDescription() ) + totalPrice) {
+    txt = 
+
+    console.log(txt);
+  }
 
   $(".dummyDescription").hide();
   $(".dummyPrice").hide();
-  $(".pDescription").append(newPizzaSelection.fullPizzaDescription() ).hide().fadeIn(2000);
-  $(".price").append("Ksh. " + totalPrice). hide().fadeIn(2000);
+  $(".pDescription").append("<li>" + newPizzaSelection.fullPizzaDescription() ).hide().fadeIn(2000) +  "</li>";
+  $(".pDescription").append("Ksh. " + totalPrice).show();
   $("#cart-btn").fadeIn(1000);
 
   document.getElementById("pizza-data-form").reset();
@@ -156,6 +163,9 @@ $(".pizza-card .add-to-cart").click(function(event) {
   $("#cart-btn").hide();
   $(".dummyDescription").fadeIn(500);
   $(".dummyPrice").fadeIn(1000);
+  
+  
+
 
   
  
@@ -213,6 +223,7 @@ $(document).ready(function(){
 
 });
 
+
 // shipping form event
 $(document).ready(function(){
   $("form#shipping-details-form").submit(function(event){
@@ -248,3 +259,196 @@ $(document).ready(function(){
 });
 
 
+// ************************************************
+// Shopping Cart function
+// ************************************************
+
+var shoppingCart = (function() {
+  
+  cart = [];
+  
+  // Constructor
+  function Item(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  
+  // Save cart
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+  
+    // Load cart
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+  
+
+  var obj = {};
+  
+  // Add to cart
+  obj.addItemToCart = function(name, price, count) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(name, price, count);
+    cart.push(item);
+    saveCart();
+  }
+  // Set count from item
+  obj.setCountForItem = function(name, count) {
+    for(var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
+  // Remove item from cart
+  obj.removeItemFromCart = function(name) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart[item].count --;
+          if(cart[item].count === 0) {
+            cart.splice(item, 1);
+          }
+          break;
+        }
+    }
+    saveCart();
+  }
+
+  // Remove all items from cart
+  obj.removeItemFromCartAll = function(name) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart.splice(item, 1);
+        break;
+      }
+    }
+    saveCart();
+  }
+
+  // Clear cart
+  obj.clearCart = function() {
+    cart = [];
+    saveCart();
+  }
+
+  // Count cart 
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  }
+
+  // Total cart
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(2));
+  }
+
+  // List cart
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for(p in item) {
+        itemCopy[p] = item[p];
+
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(2);
+      cartCopy.push(itemCopy)
+    }
+    return cartCopy;
+  }
+
+ 
+  return obj;
+})();
+
+
+// *****************************************
+// Triggers / Events
+// ***************************************** 
+// Add item
+$('.add-to-cart').click(function(event) {
+  event.preventDefault();
+  var name = $(this).data('name');
+  var price = Number($(this).data('price'));
+  shoppingCart.addItemToCart(name, price, 1);
+  displayCart();
+});
+
+// Clear items
+$('.clear-cart').click(function() {
+  shoppingCart.clearCart();
+  displayCart();
+});
+
+
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+
+                               
+  for(var i in cartArray) {
+    output += "<tr>"
+      + "<div id = 'product-description'>" + cartArray[i].name + "</div>" 
+      + "<div id='input-item'>" + cartArray[i].name + "> "
+      + "<input type='number' value = 1 data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "</div>" 
+      + "<div id = 'number-selected'> (" + cartArray[i].price + ")</div>"
+
+      ;
+  }
+  $('.show-cart').html(output);
+  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-count').html(shoppingCart.totalCount());
+}
+
+// Delete item button
+
+$('.show-cart').on("click", ".delete-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
+})
+
+
+// -1
+$('.show-cart').on("click", ".minus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+})
+// +1
+$('.show-cart').on("click", ".plus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.addItemToCart(name);
+  displayCart();
+})
+
+// Item count input
+$('.show-cart').on("change", ".item-count", function(event) {
+   var name = $(this).data('name');
+   var count = Number($(this).val());
+  shoppingCart.setCountForItem(name, count);
+  displayCart();
+});
+
+displayCart();
