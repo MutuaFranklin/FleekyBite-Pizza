@@ -167,7 +167,7 @@ $(".pizza-card .add-to-cart").click(function(event) {
   phoneN = prompt("Please enter your phone number:");
   if (confirm("Want it delivered?")) {
     output = prompt("Please enter your delivery address:");
-    alert ("thankyou " + person + " for shopping with FleekyBite pizza.Your pizza will be delivered to " + output + ". Enjoy and welcome again.");
+    alert ("Thank you " + person + " for shopping with FleekyBite pizza.Your pizza will be delivered to " + output + ". Enjoy and welcome again.");
 
 
 
