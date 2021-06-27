@@ -12,7 +12,12 @@
     cursor: pointer;
     margin-top: 27px;
     margin-bottom: 23px;
+  }
+  .navbar-brand{
+    margin-left: 20px;
 }
+
+
 
   .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
     opacity: 1;
@@ -46,7 +51,10 @@
     cursor: pointer;
   }
 
-    /* HOME */
+ /*  ============================================================================================ */
+	/* HOME PAGE
+	============================================================================================ */  
+  
   .main-home{
     height: 81vh;
    
@@ -81,6 +89,93 @@
     font-weight:500;
     font-size: 10px;
   }
+
+
+
+/*  ============================================================================================ */
+	/* MENU PAGE
+	============================================================================================ */  
+
+
+
+
+
+
+
+
+
+  /*  ============================================================================================ */
+	/* CHECK N ORDER PAGE
+	============================================================================================ */  
+
+  .check-n-order{
+    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEA8SDxAPDxAPDw8PDxAPDw8PDw8PFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFw8PFSsdFR0tLS0tKy0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLTctLS0tLS0tNzctKy0tKzcrNysrK//AABEIALcBEwMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBAf/xAAlEAEBAQEAAgIBAwUBAAAAAAAAAQIREiExUUEDYbFxgcHh8JH/xAAYAQEBAQEBAAAAAAAAAAAAAAABAAIDBP/EABoRAQEBAQEBAQAAAAAAAAAAAAABERIhAjH/2gAMAwEAAhEDEQA/APEwXR162DABR9OJONSgwDaBHBw5EikUfBw4zqaFWFxHUlxYC0pD4OK8Tg1B8PxPxWLUg/EvFJXC4rJ+JwakK4SRWJsXBUpWYsOkGkkqQWDCklEzYSAARcHDAwgHFca5GokPxORch5GlmK4cNrGbUzJ8UOHBpSHRFQhOomRpqFlLU8LxaWiJaWctc/o/aM1tn4MY+rWNx9J8W1sRed9AyokXZ6OUc/kjWfi0uPR8+hdX3EtZ8Kw5RchrS4lp4n48S1jYhtcs7BjUqYNKsFyDrMcUWqGkgAIhAbMJnCONhUgOEWVjFR0+EL6KJlVIKRfDxT5/0TNqNDx60ziUrOEanhajTM/YWcS1lMr0OJ4CdXMM+qmiKDpRpJKhSiW2cT2Lj6ODXLxeYveSs9fgNaINVJaqGFdMzTQ6Q5RYmn0FFTqLpUWNRmD4GMaKDpjiRxUhZXGozSkFVKCyUjTnovKKlMFpRRKtLJyDMrSFm/JZ0SK1F50ff6HGdZQqd1Cnv8ApHiri0tZcLjWz0z6jKeaqRnavNQo/LTNROL8foineMdz21v19Jlv5SiOI8mufotSBqVz0dVpAdIVI00E6m0+kDEgANJPhdUzCcVKWTrTNOaGRkUgrKcVnTTFlOC1lnrWI9dafE9GM1pP8D8srops6zy7c85z81Orxlnf+kXX56dZ5Xrnfj/02fkroWBcrPoukrD3U/wAn1PU1A0qczqrlCnmcPy/CcyKn8FlXlyMtaPSZFTIO/k+9FgzAWeoVi5PlOw1Kz1CiuFYm0aR1dZ2MVqDoIMa0DhKhiq8q4nqs6dIxQqkViB9V+nfaGn6cIo1PafJqPGJnUSd4dzEbvv0Ijh+XB5p1Byg5GnkJSkOFkWnKXBm/KSu+ikI6QrKrShW/SC6Os/L6F/H2tWNNezsZ4rRC+EMlwavpI9xn+pD6XmjGfiWlb0zgdISKvVZ6ZrcSAHPWjOJhymVLOVJxpmrHTzk5GmdLrTCNQ86+CzV6LLTxRIWZWWzzFakIN6UXn+iLfapUKrWkdK1PklIuUWl0REdPyJUkQq869D5RI0zSzSz/AF/sqSIpSpN5P2V4dZ4007wxiopWlNfJX59/2DWJovwLSur8JpNiLVItDUTU2r6zYrpBwAmcIVImReVIqchwpVRtmqzVz9kHmtMVdiKrqbEIrzsOVNESxNo8jpWBo4KeIrhZ1lwXLWQWLF0xlVD1kshpVyPFeIfCxrPq4nUVMpVO0ynuVMian41zV60wlNM35O1WvwmQtJKT1PkEcO1FNIahVNik1mtwiAZ0mqEbQBwlZv2Qcpyo6rGjoxpDTnXB2FkENUqCR9R04tONcrtTiHoudBXQ8k9RkOUfNT1eUq1x/gucHRr+KWE6EF0QaO0k6QjIqw4z60xQaU0d0epCk/crxFTFCgp6Olouho+ppwqEQARVKRAI4fSgKOU8lD4Qq0rSKrVjSJtTnQulqxQwnqok2lGqiVTTnhJGqm6DUiu+140ylXKlY11svK/hF1/37JmjrPK+nGd0Oo4up4no8hpwKkR1UqQ16O1FvS6NOLK1PkXVqw+lwQrQ0riaCtFQBAaQC6Os6sPp9T0zqPqvJBLpY06Vqem1qwjHQEqK6gNDF2iUpR5EYVpC0DSea06zzTMosPyOs6cq1YqDyRaXRuLFiplFq04fStScGrDlIBaQCA1H0gBah0EY0gJDOrAAET4QBAgpgUlKfQBqBgNAH0BuA+kAUKQDNR9PpAyoxKQW+oEAqh0AMkABIABIAAIgYSSABSAAyn//2Q==");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.check-n-order .head h2{ 
+    margin: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.col-md-9 p{
+   color: white;
+}
+
+.feed-pizza-data{
+    display:flex;
+    flex-direction: row;
+    height: 90vh;
+    background-color: rgb(196, 191, 191);
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  
+  }
+
+.feed-pizza-data .col-md-5{
+    height: 87vh;
+    background-color: rgb(196, 191, 191);
+}
+
+#col{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.feed-pizza-data #pizza-form h2{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+
+}
+
+.mobile-text{
+  display: block;
+  justify-content: center;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Pacifico', cursive;
+
+}
+
+
+.feed-pizza-data #pizza-feedback h2{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+
+}
 
 
 
