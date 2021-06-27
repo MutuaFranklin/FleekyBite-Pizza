@@ -55,13 +55,6 @@ PizzaType.prototype.fullPizzaDescription = function(){
 
 var pizzaValues = [].map(parseInt);
 var net = 0;
-
-// net += pizzaValues;
-// var net = pizzaValues.reduce((a, b) => a + b, 0)
-// for (var i = 0; i < pizzaValues.length; i++) {
-//   net += pizzaValues[i];
-
-
  
 
 
@@ -77,6 +70,7 @@ $("form#pizza-data-form").submit(function(event) {
     $.each($(".form-check-input:checked"), function(){
         toppingList.push($(this).val());
   });
+
   var selectedPizzaTopping = toppingList.join(", ");
   var selectedPizzaCrust= $("select#selected-crust").val();
   var selectedPizzaSize= $("select#selected-size").val();
@@ -172,15 +166,11 @@ $("form#pizza-data-form").submit(function(event) {
      t= net - pizzaValues[1]
   }
 
-
+  totalOnDelivery = net + 100;
 
 
   console.log(pizzaValues)
   console.log(net);
-
-
-
-
 
 
   $(".dummyDescription").hide();
@@ -209,34 +199,8 @@ $(".pizza-card .add-to-cart").click(function(event) {
   $("#cart-btn").hide();
   $(".dummyDescription").fadeIn(500);
   $(".dummyPrice").fadeIn(1000);
-
-
-  // var totalPrice = parseInt( 500 + crustPrice + totalP +  sizePrice );
-
-  // var totalOnDelivery = parseInt(totalPrice + 100);
-
-  // person = prompt("Please enter your name:");
-  // phoneN = prompt("Please enter your phone number:");
-
-  // if (confirm("Want it delivered?")) {
-  //   if(confirm("Delivery cost is Ksh. 100. Confirm to proceed")){
-  //   alert ("Your total cost on delivery is: " + totalOnDelivery);
-
-  //   output = prompt("Please enter your delivery address:");
-  //   alert ("Thank you " + person + " for shopping with FleekyBite pizza.Your pizza will be delivered to " + output + ". Enjoy and welcome again.");
-    
-  // }
-
-
-  // }
-  // else{
-  //   alert ("Thank you " + person + " for shopping with FleekyBite pizza.Your pizza is waiting for you. Enjoy and welcome again.");
-  // }
-
   
 
-
-  
  
 });
 
@@ -245,7 +209,9 @@ $(".pizza-card .add-to-cart").click(function(event) {
 $('select').on('change', function() {
   if ($(this).val() === 'yes') {
     $(".pDescription").show();
-    
+    $(".final-output").append("<p>" + "Subtotal: Ksh. " + net + "</p>");
+    $(".final-output").append(" <p>" + "Shipping fee: Ksh. 100");
+    $(".final-output").append("Total cost: Ksh. " + totalOnDelivery);
     $("#shipping-details img").hide();
     $(".shipping-form").fadeIn(2000);
     $("#cart-details .total-cost").hide();
@@ -258,7 +224,7 @@ $('select').on('change', function() {
   else{
     $("#shipping-details img").fadeIn(2000);
     $(".shipping-form").hide();
-    // $("#cart-details .total-cost").append("The total cost is Ksh. " + net + "Kindly submit your order");
+    // $("#cart-details #netcost").append("The total cost is Ksh. " + net + "Kindly submit your order");
     $("#cart-details .no-delivery-btn").fadeIn(2000);
 
 
