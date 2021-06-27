@@ -68,6 +68,36 @@ html {
     }
 
 
+    .main-home{
+      height: 84vh;
+      background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190830/pngtree-golden-glitter-and-shiny-golden-frame-on-brown-background-image_308351.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .main-home .homeText{
+      margin-top: 180px;
+      text-align: center;
+    }
+
+    .main-home .homeText h2{
+      font-family: 'Pacifico', cursive;
+      font-size: 40px;
+      font-weight: 600;
+      color: yellow;
+      margin-bottom: 50px;
+    }
+
+    .main-home  .homeText p{
+      font-family: 'Pacifico', cursive;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+    }
+
+
     .carousel-item{
         height: 50rem;
         position: relative;
