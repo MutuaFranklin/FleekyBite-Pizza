@@ -1,4 +1,4 @@
-# FLEEKYBITE PIZZA
+# FleekyBite Pizza
 
 ### Description
 
@@ -46,12 +46,16 @@ Type https://github.com/MutuaFranklin/FleekyBite-Pizza and press Enter to create
 ```
 
 ## BDD
-- Provide information about Delani studio  which includes services offered, portfolio items, and social links.
-- Allow user to send message or comment via form where user name , email and the message are the input requirements.
-- Create a Hover effect for the Portfolio sections such that on hover a white box appears with the name of the project inside.The project picture should still be visible in the background.
-- Tell the user through a pop up that you have received their message and also thank them for contacting you. eg: "Franklin Mutua we have received your message".
-- Use mail chimp API to track all the emails and messages from your users.
-- Make the site responsive.
+As a customer, I would like to;
+
+- Choose the size of pizza I want e.g Small, Medium, Large
+- Choose what kind of crust I would like the pizza to have e.g Crispy, Stuffed, Gluten-free
+- Choose the topping(s) I want on my pizza.
+- Place an order for my Pizza and see the total charge for it.
+- Have an option to order as many pizzas as I want.
+- Have an option to have the pizza delivered or not.  If delivered I want to be alerted how much the delivery charge will be.
+- If I want my pizza to be delivered, I want to be prompted to enter where the delivery should be made and an alert saying '' your order will be delivered to your location"
+- See a checkout button that when clicked shows the total amount charged for the orders.
 
 ## Technologies Used
 
@@ -63,7 +67,7 @@ Type https://github.com/MutuaFranklin/FleekyBite-Pizza and press Enter to create
 
 ## Live link
 
-Live link: [Delani-Studio live link](https://mutuafranklin.github.io/Delani-Studio/)
+Live link: [FleekyBite Pizza live link](https://mutuafranklin.github.io/FleekyBite-Pizza/)
 
 ## Support and contact details
 
