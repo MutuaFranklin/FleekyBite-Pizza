@@ -173,7 +173,7 @@ $(".pizza-card .add-to-cart").click(function(event) {
 
   }
   else{
-    alert ("Thankyou " + person + " for shopping with FleekyBite pizza.Your pizza is waiting for you. Enjoy and welcome again.");
+    alert ("Thank you " + person + " for shopping with FleekyBite pizza.Your pizza is waiting for you. Enjoy and welcome again.");
   }
 
   
