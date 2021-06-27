@@ -171,12 +171,11 @@ html {
   }
 
   .pizza-types  nav .navbar-nav li a:active{
-    color:#fd7e14;
+    color:#fd7e14 !important;
   }
 
-  .pizza-types  nav .navbar-nav li a .active{
-    color:#fd7e14;
-  }
+  .pizza-types  nav .navbar-nav li a:link.changeColor{
+    background-color:black !important  }
 
   .pizza-types  nav .navbar-nav li a:hover{
     color:#fd7e14 !important;

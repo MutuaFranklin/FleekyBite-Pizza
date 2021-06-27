@@ -5,6 +5,14 @@ $(document).ready(function(){
   })
 });    
 
+
+$(function(){
+  var $targetElement = $(".pizza-types nav .navbar-nav li a");           
+  $targetElement.click(function() {
+     $targetElement.removeClass("changeColor");
+     $(this).addClass("changeColor");
+  });
+});
 //Display and hide certain div classes
 $(document).ready(function(){
   $("#topping-link").click(function(){
@@ -135,12 +143,9 @@ $("form#pizza-data-form").submit(function(event) {
 
   var totalPrice = parseInt( 500 + crustPrice + totalP +  sizePrice );
 
-  var txt;
-  var txtP;
-
+  
   if (confirm(newPizzaSelection.fullPizzaDescription() ) + totalPrice) {
     
-
   }
 
   $(".dummyDescription").hide();
@@ -163,12 +168,21 @@ $(".pizza-card .add-to-cart").click(function(event) {
   $(".dummyDescription").fadeIn(500);
   $(".dummyPrice").fadeIn(1000);
 
+  var totalPrice = parseInt( 500 + crustPrice + totalP +  sizePrice );
+
+  var totalOnDelivery = parseInt(totalPrice + 100);
+
   person = prompt("Please enter your name:");
   phoneN = prompt("Please enter your phone number:");
+
   if (confirm("Want it delivered?")) {
+    if(confirm("Delivery cost is Ksh. 100. Confirm to proceed")){
+    alert ("Your total cost on delivery is: " + totalOnDelivery);
+
     output = prompt("Please enter your delivery address:");
     alert ("Thank you " + person + " for shopping with FleekyBite pizza.Your pizza will be delivered to " + output + ". Enjoy and welcome again.");
-
+    
+  }
 
 
   }
