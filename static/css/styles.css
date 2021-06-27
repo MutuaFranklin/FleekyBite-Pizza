@@ -266,6 +266,7 @@ html {
     background-size: cover;
   }
   #menu-slides .carousel-caption #pizza9{
+    background-image: url("https://i2-prod.mirror.co.uk/incoming/article6463123.ece/ALTERNATES/s615/Hawaiian-Pizza.jpg");
     background-size: cover;
   }
 
@@ -310,6 +311,7 @@ html {
     width: 100%;
     font-size: 12px;
     font-weight: bold;
+    background-color: tomato;
 }
 
 .menu-button a{ 
