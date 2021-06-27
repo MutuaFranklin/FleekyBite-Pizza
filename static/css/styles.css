@@ -95,7 +95,7 @@ html {
         width: 50vw;
         background-size: cover;
         border-radius: 0% !important;
-        border: 2px solid white;
+        /* border: 2px solid white; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -105,16 +105,23 @@ html {
       }
 
       #home-slide .carousel-caption .card h2{
-        font-family: 'Italianno', cursive;
-        font-size: 50px;
+        font-family: 'Pacifico', cursive;
+        font-size: 40px;
         font-weight: 600;
         color: yellow;
+        margin-bottom: 50px;
+      }
+
+      #home-slide .carousel-caption .card p{
+        font-family: 'Pacifico', cursive;
+        font-size: 20px;
+        font-weight: 600;
       }
    
       #respofooter{
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 25px;
         color: black;
         font-weight:500;
         font-size: 12px;
@@ -447,7 +454,7 @@ html {
   .pizza-card .price {
     display: none;
     color: rgb(51, 8, 8);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
 
   }
