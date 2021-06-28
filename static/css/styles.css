@@ -570,7 +570,7 @@ html {
 
 }
 
-.cart-detail-box{
+/* .cart-detail-box{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -580,7 +580,7 @@ html {
   font-weight: bold;
   margin-bottom: 10px;
   background-color: rgb(204, 137, 4);
-}
+} */
 
 .cart-detail-box p{
   color: #000;
@@ -663,6 +663,10 @@ html {
   display: none;
 }
 
+#shipping-details{
+  margin-top: 50px;
+
+}
 
 #shipping-details .shipping-form{
   color: white;

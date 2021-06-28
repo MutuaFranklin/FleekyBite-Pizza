@@ -4,6 +4,9 @@
   .dropdown #drop{
 		font-size: 10px;
 	}
+  #main-navbar{
+    width: 100%;
+  }
 	
   #main-navbar .navbar-toggler {
     border: none;
@@ -143,7 +146,7 @@
   }
 
 .feed-pizza-data .col-md-5{
-    height: 87vh;
+    height: 100vh;
     background-color: rgb(196, 191, 191);
 }
 
@@ -169,6 +172,23 @@
   font-family: 'Pacifico', cursive;
 
 }
+.feed-pizza-data{
+  margin-top: 30px;
+}
+.feed-pizza-data #pizza-feedback{
+  height: 77vh;
+}
+
+.pizza-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+  font-family: arial;
+}
+
+.pizza-card img{
+  height: 300px !important;
+}
 
 
 .feed-pizza-data #pizza-feedback h2{
@@ -177,7 +197,36 @@
     margin-top: 10px;
 
 }
+.modal{
+  width: 100%;
 
+
+}
+
+.modal-content{
+  height: 200vh;
+
+}
+
+
+.modal-body{
+  height: 130vh;
+  width: 32%;
+  
+}
+
+.cart-shipping{
+  display:flex;
+  flex-direction: row;
+  height: 180vh;
+
+}
+
+.cart-shipping .col-md-5{
+  height: 70vh;
+  border: 1px solid white;
+  background-color: rgb(53, 16, 11);
+}
 
 
 }
