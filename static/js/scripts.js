@@ -217,6 +217,8 @@ $('select').on('change', function() {
     $("#cart-details .total-cost").hide();
     $("#cart-details .no-delivery-btn").hide();
     $(".shipping-form").css("align-items", "centre");
+    $(".final-output").fadeIn(2000);
+
 
 
 
@@ -292,6 +294,7 @@ $(document).ready(function(){
     else{
       alert (name + ", thank you for shopping with FleekyBite pizza.Your pizza will be delivered to " + address + ". Enjoy and welcome again.");
     }
+    $(".final-output").hide().empty();
     $(".subtotal").hide().empty();
     $(".pDescription").hide().empty();
     $(".price").hide().empty();
