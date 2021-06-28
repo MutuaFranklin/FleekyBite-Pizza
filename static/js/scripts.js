@@ -194,8 +194,6 @@ $(".pizza-card .add-to-cart").click(function(event) {
   
   $(".subtotal").append(" Subtotal: Ksh. " + net).fadeIn(2000);
   $("#selected-orders").append('</td><td id="pizzatopping">' + newPizzaSelection.selectedPizzaTopping + '</td><td id="pizzacrust">'+ newPizzaSelection.selectedPizzaCrust + '</td><td id="pizzasize">'+ newPizzaSelection.selectedPizzaSize+'</td><td id="pizzaprice">'+ totalPrice+ '</td></tr>');
-  $(".pDescription").hide().empty();
-  $(".price").hide().empty();
   $("#cart-btn").hide();
   $(".dummyDescription").fadeIn(500);
   $(".dummyPrice").fadeIn(1000);
@@ -246,12 +244,27 @@ $(document).ready(function(){
     }
 
     else{
-      alert (name + ", thankyou for shopping with FleekyBite pizza.Your pizza is waiting for you. Enjoy and welcome again.");
+      alert (name + ", thank you for shopping with FleekyBite pizza.Your pizza is waiting for you. Enjoy and welcome again.");
     }
     
+    $(".pDescription").hide().empty();
+    $(".price").hide().empty();
     $('form#details-form').get(0).reset();
     $("#cart-details .no-delivery-btn").hide();
     $("#cart-details .total-cost").hide();
+    $(".pizza-card .add-to-cart").click(function(event) {
+      event.preventDefault();
+      
+    $(".subtotal").append(" Subtotal: Ksh. " + net).fadeIn(2000);
+    $("#selected-orders").append('</td><td id="pizzatopping">' + newPizzaSelection.selectedPizzaTopping + '</td><td id="pizzacrust">'+ newPizzaSelection.selectedPizzaCrust + '</td><td id="pizzasize">'+ newPizzaSelection.selectedPizzaSize+'</td><td id="pizzaprice">'+ totalPrice+ '</td></tr>');
+    $("#cart-btn").hide();
+    $(".dummyDescription").fadeIn(500);
+    $(".dummyPrice").fadeIn(1000);
+      
+    
+     
+    });
+    
     $('#exampleModal').modal('hide');
 
     return false;
@@ -279,9 +292,11 @@ $(document).ready(function(){
       alert("Please enter your delivery address!");
     }
     else{
-      alert (name + ", thankyou for shopping with FleekyBite pizza.Your pizza will be delivered to " + address + ". Enjoy and welcome again.");
+      alert (name + ", thank you for shopping with FleekyBite pizza.Your pizza will be delivered to " + address + ". Enjoy and welcome again.");
     }
     
+    $(".pDescription").hide().empty();
+    $(".price").hide().empty();
     $('form#shipping-details-form').get(0).reset();
     $('form#details-form').get(0).reset();
     $("#shipping-details img").fadeIn(2000);
@@ -443,16 +458,8 @@ function displayCart() {
   var output = "";
 
                                
-  for(var i in cartArray) {
-    output += "<tr>"
-      + "<div id = 'product-description'>" + cartArray[i].name + "</div>" 
-      + "<div id='input-item'>" + cartArray[i].name + "> "
-      + "<input type='number' value = 1 data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-      + "</div>" 
-      + "<div id = 'number-selected'> (" + cartArray[i].price + ")</div>"
 
-      ;
-  }
+  
   $('.show-cart').html(output);
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html(shoppingCart.totalCount());
