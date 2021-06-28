@@ -191,12 +191,14 @@ $("form#pizza-data-form").submit(function(event) {
 // On add to cart actions
 $(".pizza-card .add-to-cart").click(function(event) {
   event.preventDefault();
-  
   $(".subtotal").append(" Subtotal: Ksh. " + net).fadeIn(2000);
   $("#selected-orders").append('</td><td id="pizzatopping">' + newPizzaSelection.selectedPizzaTopping + '</td><td id="pizzacrust">'+ newPizzaSelection.selectedPizzaCrust + '</td><td id="pizzasize">'+ newPizzaSelection.selectedPizzaSize+'</td><td id="pizzaprice">'+ totalPrice+ '</td></tr>');
   $("#cart-btn").hide();
+  $(".pDescription").hide().empty();
+  $(".price").hide().empty();
   $(".dummyDescription").fadeIn(500);
   $(".dummyPrice").fadeIn(1000);
+
   
 
  
@@ -222,7 +224,6 @@ $('select').on('change', function() {
   else{
     $("#shipping-details img").fadeIn(2000);
     $(".shipping-form").hide();
-    // $("#cart-details #netcost").append("The total cost is Ksh. " + net + "Kindly submit your order");
     $("#cart-details .no-delivery-btn").fadeIn(2000);
 
 
@@ -249,13 +250,13 @@ $(document).ready(function(){
     
     $(".pDescription").hide().empty();
     $(".price").hide().empty();
+    $(".subtotal").hide().empty();
     $('form#details-form').get(0).reset();
     $("#cart-details .no-delivery-btn").hide();
     $("#cart-details .total-cost").hide();
     $(".pizza-card .add-to-cart").click(function(event) {
       event.preventDefault();
       
-    $(".subtotal").append(" Subtotal: Ksh. " + net).fadeIn(2000);
     $("#selected-orders").append('</td><td id="pizzatopping">' + newPizzaSelection.selectedPizzaTopping + '</td><td id="pizzacrust">'+ newPizzaSelection.selectedPizzaCrust + '</td><td id="pizzasize">'+ newPizzaSelection.selectedPizzaSize+'</td><td id="pizzaprice">'+ totalPrice+ '</td></tr>');
     $("#cart-btn").hide();
     $(".dummyDescription").fadeIn(500);
