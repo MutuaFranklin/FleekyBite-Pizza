@@ -292,7 +292,7 @@ $(document).ready(function(){
     else{
       alert (name + ", thank you for shopping with FleekyBite pizza.Your pizza will be delivered to " + address + ". Enjoy and welcome again.");
     }
-    
+    $(".subtotal").hide().empty();
     $(".pDescription").hide().empty();
     $(".price").hide().empty();
     $('form#shipping-details-form').get(0).reset();
