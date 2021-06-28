@@ -282,14 +282,11 @@ $(document).ready(function(){
     var address = $("input#user-address").val();
 
     if (!$("#details-form input#user-name").val()){
-      alert("Please enter your name!")
     }
     else if (!$("#details-form input#user-number").val()){
-      alert("Please enter your phone number!");
     }
 
     else if (!$("input#user-address").val()){
-      alert("Please enter your delivery address!");
     }
     else{
       alert (name + ", thank you for shopping with FleekyBite pizza.Your pizza will be delivered to " + address + ". Enjoy and welcome again.");
