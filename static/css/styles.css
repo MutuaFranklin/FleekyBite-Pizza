@@ -363,7 +363,7 @@ html {
   }
 
 .feed-pizza-data .col-md-5{
-    height: 70vh;
+    height: 700px;
     border: 2px solid black;
 }
 
@@ -542,7 +542,7 @@ html {
   .cart-shipping{
     display:flex;
     flex-direction: column;
-    height: 62vh;
+    height: 580px;
     /* background-color: rgb(196, 191, 191); */
     align-items: center;
     justify-content: center;
