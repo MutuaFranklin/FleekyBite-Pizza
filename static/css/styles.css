@@ -69,7 +69,7 @@ html {
 
 
     .main-home{
-      height: 84vh;
+      height: 800px;
       background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190830/pngtree-golden-glitter-and-shiny-golden-frame-on-brown-background-image_308351.jpg");
       background-size: cover;
       background-position: center;
@@ -116,7 +116,7 @@ html {
 
     .menu{
         background-image: url(../img/backgrounds/b1.jpg);
-        height: 90.9vh;
+        height: 863px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -332,7 +332,7 @@ html {
     background-image: url("https://image.freepik.com/free-photo/flat-lay-frame-with-pizza-black-background_23-2148308880.jpg");
     background-size: cover;
     background-position: center;
-    height: 90.9vh;
+    height: 863px;
     display: flex;
     flex-direction: column;
     align-items: center;

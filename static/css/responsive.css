@@ -210,8 +210,7 @@
 
 
 .modal-body{
-  height: 130vh;
-  width: 32%;
+  width: 30%;
   
 }
 
@@ -227,6 +226,8 @@
   border: 1px solid white;
   background-color: rgb(53, 16, 11);
 }
+
+
 
 
 }
